@@ -7,7 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-
+user.destroy_all
+userlistings.destroy_all
 
 user = User.create(name:'Phil', location:'Mars',sex:'Male',
   phone_number:"911",email:'philyonceco@madsinger.com', website: 'www.phil.com',

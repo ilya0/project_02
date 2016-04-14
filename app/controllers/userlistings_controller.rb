@@ -29,14 +29,16 @@ class UserlistingsController < ApplicationController
   end
 
   def edit
+ @userlisting = Userlisting.find(params[:id])
+  end
+
+  def update
+    @userlisting = Userlisting.find(params[:id])
     if @userlisting.update_attributes(userlisting_params)
        redirect_to userlisting_path
     else
       render :edit
     end
-  end
-
-  def update
   end
 
   def destroy
@@ -47,6 +49,6 @@ class UserlistingsController < ApplicationController
 
   private
   def userlisting_params
-    params.require(:userlisting).permit(:title,:details,:pay,:location,:email,:category)
+    params.require(:userlisting).permit(:title,:details,:pay,:location,:email,:category,:user_id)
   end
 end
