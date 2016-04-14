@@ -7,18 +7,19 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-user.destroy_all
-userlistings.destroy_all
+User.destroy_all
+Userlisting.destroy_all
 
-user = User.create(name:'Phil', location:'Mars',sex:'Male',
+user = User.new(name:'Phil', location:'Mars',sex:'Male',
   phone_number:"911",email:'philyonceco@madsinger.com', website: 'www.phil.com',
   fblink:'www.facebook.com/philyonceco',sclink:"www.soundcloud.com/philyonceco",
   twlink:'www.twitter.com/phil')
+user.save
 
 
-user.userlistings.create(title: 'pay me gig',details:'info text', location:'LA', pay: "$9.50",
+listing = user.userlistings.new(title: 'pay me gig',details:'info text', location:'LA', pay: "$9.50",
   email: 'phill@co.com',user_id:0, category:'hip-hop', hide: false)
-
+listing.save
 
 
 
