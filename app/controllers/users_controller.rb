@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def new
-
+@user = User.new
   end
 
   def create
@@ -23,8 +23,17 @@ class UsersController < ApplicationController
       #if everythng is wrong re-render page by instanciating the new method
       render :new
     end
+  end
+
+  def show
+    @user = User.find_by(id: params[:id])
+  end
 
 
+
+  private
+  def user_params
+    params.require(:user).permit(:title,:details,:pay,:location,:email,:category,:user_id)
   end
 
 

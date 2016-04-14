@@ -2,29 +2,26 @@
 <p>Find me in app/views/users/show.html.erb</p>
 
 <p>
-<%= @user.name %>
-<%= @user.location %>
-<%= @user.sex %>
-<%= @user.phone_number %>
-<%= @user.email %>
-<%= @user.fblink %>
-<%= @user.sclink %>
-<%= @user.twlink %>
+  <%= @user.name %>
+  <%= @user.location %>
+  <%= @user.sex %>
+  <%= @user.phone_number %>
+  <%= @user.email %>
+  <%= @user.fblink %>
+  <%= @user.sclink %>
+  <%= @user.twlink %>
 </p>
 
-<% if current_user && @userlistings.user && current_user.id == @userlistings.user.id  %>
-<!-- if some one is logged in and the userlisting has an id and the current user id matches the user listing user id -->
+<!-- if some one is logged in  -->
+<% if current_user %>
   <a href="/logout"> Logout </a>
   <br>
-
-  <%= link_to 'Edit your profile', edit_user_path %>
+    <%= link_to 'Edit your profile', edit_user_path %>
   <br>
-  <%= link_to "Delete this profile", user_path, method: :delete, data:{confirm:'Are you sure?'} %>
-
+    <%= link_to "Delete this profile", user_path, method: :delete, data:{confirm:'Are you sure?'} %>
   <br>
-
-  <% else %>
-  <%= link_to "Back to listing page", userlistings_path %> <br>
-  <a href="/login">Login</a>
+<% else %>
+    <%= link_to "Back to listing page", userlistings_path %> <br>
+    <a href="/login">Login</a>
 <% end %>
 

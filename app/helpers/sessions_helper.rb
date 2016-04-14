@@ -5,6 +5,10 @@ module SessionsHelper
       id:session[:user_id]
       })
   end
+
+  def current_user_owns?(listing)
+    current_user && current_user == listing.user
+  end
 end
     #if its null set it to the item otherwise set it to previous
 

@@ -9,10 +9,10 @@
 <%= @userlistings.location%>
 <%= @userlistings.email%>
 <%= @userlistings.category%>
-
+<p> Created by:  <%=link_to @userlistings.user.name, user_path(@userlistings.user) %> </p>
 </p>
-
-<% if current_user && @userlistings.user && current_user.id == @userlistings.user.id  %>
+<!-- this is the login based on the fact that the user is logged in -->
+<% if current_user_owns?( @userlistings )  %>
 <!-- if some one is logged in and the userlisting has an id and the current user id matches the user listing user id -->
   <a href="/logout"> Logout </a>
   <br>

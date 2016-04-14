@@ -49,6 +49,6 @@ class UserlistingsController < ApplicationController
 
   private
   def userlisting_params
-    params.require(:userlisting).permit(:title,:details,:pay,:location,:email,:category,:user_id)
+    params.require(:userlisting).permit(:name,:location,:sex,:phone_number,:website,:fblink,:sclink,:twlink)
   end
 end

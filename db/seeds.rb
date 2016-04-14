@@ -7,13 +7,13 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-User.destroy_all
-Userlisting.destroy_all
+# User.destroy_all
+# Userlisting.destroy_all
 
 user = User.new(name:'Phil', location:'Mars',sex:'Male',
   phone_number:"911",email:'philyonceco@madsinger.com', website: 'www.phil.com',
   fblink:'www.facebook.com/philyonceco',sclink:"www.soundcloud.com/philyonceco",
-  twlink:'www.twitter.com/phil')
+  twlink:'www.twitter.com/phil',password:'phil',password_confirmation:'phil')
 user.save
 
 
