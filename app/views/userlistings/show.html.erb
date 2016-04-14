@@ -12,9 +12,17 @@
 
 </p>
 
+<% if session[:user_id] %>
+  <a href="/logout"> Logout </a>
+  <br>
 
+  <%= link_to 'Edit your listing', edit_userlisting_path %>
+  <br>
+  <%= link_to "Delete this listing", userlisting_path, method: :delete, data:{confirm:'Are you sure?'} %>
 
-<%= link_to 'Edit your listing', edit_userlisting_path %>
-<%= link_to "Delete this listing", userlisting_path, method: :delete, data:{confirm:'Are you sure?'} %>
-<br>
-<%= link_to "Back to listing page", userlistings_path %>
+  <br>
+  <%= link_to "Back to listing page", userlistings_path %>
+
+  <% else %>
+  <a href="/login">Login</a>
+<% end %>

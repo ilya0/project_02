@@ -5,7 +5,11 @@
 
 <a href="/userlistings/new">Post to a board</a>
 <br>
-<a href="/login">Login</a>
+<% if session[:user_id] %>
+  <a href="/logout"> Logout </a>
+<% else %>
+  <a href="/login">Login</a>
+<% end %>
 <br>
 <a href="/users/new">Create new user</a>
 
