@@ -12,7 +12,8 @@
 
 </p>
 
-<% if session[:user_id] %>
+<% if current_user && @userlistings.user && current_user.id == @userlistings.user.id  %>
+<!-- if some one is logged in and the userlisting has an id and the current user id matches the user listing user id -->
   <a href="/logout"> Logout </a>
   <br>
 
@@ -21,8 +22,9 @@
   <%= link_to "Delete this listing", userlisting_path, method: :delete, data:{confirm:'Are you sure?'} %>
 
   <br>
-  <%= link_to "Back to listing page", userlistings_path %>
+
 
   <% else %>
+  <%= link_to "Back to listing page", userlistings_path %> <br>
   <a href="/login">Login</a>
 <% end %>

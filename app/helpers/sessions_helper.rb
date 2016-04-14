@@ -1,7 +1,7 @@
 module SessionsHelper
   def current_user
     #if the @currentuser database is nil then find the user id by the user_id
-    @currentuser ||= User.find_by({
+    @current_user ||= User.find_by({
       id:session[:user_id]
       })
   end
