@@ -3,26 +3,20 @@
 <% if current_user %>
 <!-- if the current_user function returns true -->
 
-<ul>
-<!-- display the users and the salted password from db -->
-<% @users.each do |user| %>
-<li><%= user.email %> - <%= user.password_digest %> </li>
-<% end %>
+  <ul>
+  <!-- display the users and the salted password from db -->
+  <% @users.each do |user| %>
+    <li><%= user.email %> - <%= user.password_digest %> </li>
+  <% end %>
+  </ul>
 
-</ul>
-
-<form action= "/logout" method="post">
-<input name="_method" value="DELETE" type= "hidden">
-<button> Log Out </button>
-</form>
-
-
-
-
+  <form action="/logout" method="post">
+    <input name="_method" value="DELETE" type="hidden">
+    <button> Log Out </button>
+  </form>
 
 <!-- redirect to a options view -->
 <% else %>
-<a href="/login"> Login </a>
-<a href="/signup"> Signup </a>
-
+  <a href="/login"> Login </a>
+  <a href="/signup"> Signup </a>
 <% end %>

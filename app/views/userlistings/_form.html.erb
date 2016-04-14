@@ -1,40 +1,37 @@
 <%= form_for @userlisting do |f| %>
+  <div>
+    <%=f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :details %>
+    <%= f.text_field :details %>
+  </div>
+
+  <div>
+    <%= f.label :pay %>
+    <%= f.text_field :pay %>
+  </div>
 
 
-<div>
-  <%=f.label :title %>
-  <%= f.text_field :title %>
+  <div>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
 
-</div>
+  <div>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
 
-<div>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-</div>
-
-<div>
-  <%= f.label :pay %>
-  <%= f.text_field :pay %>
-</div>
-
-
-<div>
-  <%= f.label :location %>
-  <%= f.text_field :location %>
-</div>
-
-<div>
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-</div>
-
-<div>
-  <%= f.label :category %>
-  <%= f.text_field :category %>
-</div>
+  <div>
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+  </div>
 
   <%= f.submit %>
-  <% end %>
+<% end %>
 
 
 <%= link_to "Back to the listings", userlistings_path%>

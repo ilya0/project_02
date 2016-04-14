@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
         session[:user_id] = user.id
 
-      redirect_to "/userlisting/index"
+      redirect_to "/userlistings"
     else
       render :new
     end
