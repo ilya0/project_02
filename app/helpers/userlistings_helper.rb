@@ -1,0 +1,2 @@
+module UserlistingsHelper
+end

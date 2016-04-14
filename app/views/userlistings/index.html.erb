@@ -1,0 +1,29 @@
+<!-- This is the index page of the site -->
+
+<h1>Userlistings#index</h1>
+<p>Find me in app/views/userlistings/index.html.erb</p>
+
+
+<a href="/userlistings/new">
+  Post to a board
+</a>
+<br>
+<a href="/sessions/new">
+  Login
+</a>
+<br>
+<a href="/users/new">
+  Create new user
+</a>
+
+
+
+<ul>
+  <% @userlistings.each do |userlisting| %>
+    <li>
+      <strong> <%= link_to(userlisting.title, userlisting_path(userlisting)) %>- <%= userlisting.location %> </strong>
+    </li>
+  <%end %>
+</ul>
+
+

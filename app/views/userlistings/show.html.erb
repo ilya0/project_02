@@ -1,0 +1,20 @@
+<h1>Userlistings#show</h1>
+<p>Find me in app/views/userlistings/show.html.erb</p>
+
+
+<p>
+<%= @userlistings.title%>
+<%= @userlistings.details%>
+<%= @userlistings.pay%>
+<%= @userlistings.location%>
+<%= @userlistings.email%>
+<%= @userlistings.category%>
+
+</p>
+
+
+
+<%= link_to 'Edit your listing', edit_userlisting_path %>
+<%= link_to "Delete this listing", userlisting_path, method: :delete, data:{confirm:'Are you sure?'} %>
+<br>
+<%= link_to "Back to listing page", userlistings_path %>
