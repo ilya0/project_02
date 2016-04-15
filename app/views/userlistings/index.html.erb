@@ -23,7 +23,7 @@
 
 
 <ul>
-  <% @userlistings.each do |userlisting| %>
+  <% @userlistings.reverse.each do |userlisting| %>
     <li>
       <strong> <%= link_to(userlisting.title, userlisting_path(userlisting)) %>- <%= userlisting.location %> </strong>
     </li>
