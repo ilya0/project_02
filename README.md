@@ -4,9 +4,9 @@
 
 Tables
 
-Users -> Userlistings
-Users have many Userlistings
-Userlistings belong to a user
+*Users -> Userlistings
+*Users have many Userlistings
+*Userlistings belong to a user
 
 |table "users" |
 --- | --- | ---
