@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :if_login, only: [:show]
   def index
     @users = User.all
   end
@@ -54,6 +55,15 @@ def edit
   private
   def user_params
     params.require(:user).permit(:name,:location,:sex,:phone_number,:email,:website,:fblink,:sclink,:twlink,)
+  end
+
+  def if_login
+    if @current_user
+
+    else
+ redirect_to userlistings_path
+    end
+
   end
 
 
