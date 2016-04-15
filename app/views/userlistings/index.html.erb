@@ -10,15 +10,11 @@
     <a href="/logout"> Logout </a>
       <br>
     <%= link_to 'Edit your profile', edit_user_path(User.find(session[:user_id])) %>
-
-
-
   <% else %>
     <a href="/login">Login</a>
-<br>
+      <br>
     <a href="/users/new">Create new user</a>
-
-  <% end %>
+<% end %>
 
 
 

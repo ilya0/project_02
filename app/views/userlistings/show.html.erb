@@ -1,29 +1,27 @@
 <h1><%= @userlistings.title%></h1>
 
 <p>
-<%= @userlistings.details%>
+  <%= @userlistings.details%>
 
-<p> Music Category <%= @userlistings.category%> </p>
-<p> Pay Rate: <%= @userlistings.pay%> </p>
-<p> Location: <%= @userlistings.location%> </p>
+  <p> Music Category <%= @userlistings.category%> </p>
+  <p> Pay Rate: <%= @userlistings.pay%> </p>
+  <p> Location: <%= @userlistings.location%> </p>
 
-<p> Contact me at: <%= @userlistings.email%> </p>
-<p> Created by:  <%=link_to @userlistings.user.name, user_path(@userlistings.user) %> </p>
+  <p> Contact me at: <%= @userlistings.email%> </p>
+  <p> Created by:  <%=link_to @userlistings.user.name, user_path(@userlistings.user) %> </p>
 </p>
 <!-- this is the login based on the fact that the user is logged in -->
 <% if current_user_owns?( @userlistings )  %>
-<!-- if some one is logged in and the userlisting has an id and the current user id matches the user listing user id -->
-  <a href="/logout"> Logout </a>
-  <br>
-
+  <!-- if some one is logged in and the userlisting has an id and the current user id matches the user listing user id -->
+      <a href="/logout"> Logout </a>
+        <br>
   <%= link_to 'Edit your listing', edit_userlisting_path %>
-  <br>
+        <br>
   <%= link_to "Delete this listing", userlisting_path, method: :delete, data:{confirm:'Are you sure?'} %>
-<br><%= link_to "Back to listing page", userlistings_path %>
-  <br>
-
-
+        <br>
+  <%= link_to "Back to listing page", userlistings_path %>
+        <br>
   <% else %>
-  <%= link_to "Back to listing page", userlistings_path %> <br>
-  <a href="/login">Login</a>
+    <%= link_to "Back to listing page", userlistings_path %> <br>
+    <a href="/login">Login</a>
 <% end %>
