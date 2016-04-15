@@ -1,10 +1,11 @@
 class UsersController < ApplicationController
   def index
-    @user = User.all
+    @users = User.all
   end
 
   def new
-@user = User.new
+    @user = User.new
+
   end
 
   def create
@@ -25,15 +26,34 @@ class UsersController < ApplicationController
     end
   end
 
+
+def edit
+ @user = User.find(params[:id])
+ @users = User.all
+ # @userlist = Userlisting.all
+   @userlist = @user.userlistings.all
+
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+       redirect_to user_path
+    else
+      render :edit
+    end
+  end
+
+
+
   def show
     @user = User.find_by(id: params[:id])
   end
 
 
-
   private
   def user_params
-    params.require(:user).permit(:title,:details,:pay,:location,:email,:category,:user_id)
+    params.require(:user).permit(:name,:location,:sex,:phone_number,:email,:website,:fblink,:sclink,:twlink,)
   end
 
 

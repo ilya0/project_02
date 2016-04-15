@@ -4,6 +4,7 @@ class UserlistingsController < ApplicationController
      # @user_id = User.first.id
     @userlistings = Userlisting.all
     @userlisting = Userlisting.new
+     # @user = User.find(session[:user_id])
   end
 
   def new
@@ -30,6 +31,7 @@ class UserlistingsController < ApplicationController
 
   def edit
  @userlisting = Userlisting.find(params[:id])
+ @users = User.all
   end
 
   def update
@@ -47,8 +49,10 @@ class UserlistingsController < ApplicationController
     redirect_to userlistings_path
   end
 
+
+
   private
   def userlisting_params
-    params.require(:userlisting).permit(:name,:location,:sex,:phone_number,:website,:fblink,:sclink,:twlink)
+    params.require(:userlisting).permit(:title,:details,:location,:pay,:email,:user_id,:category)
   end
 end

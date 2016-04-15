@@ -20,6 +20,8 @@
   <br>
     <%= link_to "Delete this profile", user_path, method: :delete, data:{confirm:'Are you sure?'} %>
   <br>
+<%= link_to "Back to listing page", userlistings_path %>
+
 <% else %>
     <%= link_to "Back to listing page", userlistings_path %> <br>
     <a href="/login">Login</a>

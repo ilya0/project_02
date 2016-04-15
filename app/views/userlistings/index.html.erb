@@ -5,14 +5,20 @@
 
 
 <% if session[:user_id] %>
-<a href="/userlistings/new">Post to a board</a>
-<br>
-  <a href="/logout"> Logout </a>
-<% else %>
-  <a href="/login">Login</a>
-<% end %>
-<br>
-<a href="/users/new">Create new user</a>
+
+  <a href="/userlistings/new">Post to a board</a>
+      <br>
+    <a href="/logout"> Logout </a>
+      <br>
+    <%= link_to 'Edit your profile', edit_user_path(User.find(session[:user_id])) %>
+
+
+
+  <% else %>
+    <a href="/login">Login</a>
+  <% end %>
+    <br>
+    <a href="/users/new">Create new user</a>
 
 
 

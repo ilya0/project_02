@@ -1,3 +1,14 @@
 <h1>Users#edit</h1>
 <p>Find me in app/views/users/edit.html.erb</p>
 <%= render 'userform' %>
+
+
+<p> Your listings </p>
+
+<ul>
+  <% @userlist.each do |userlisting| %>
+    <li>
+      <strong> <%= link_to(userlisting.title, userlisting_path(userlisting)) %>- <%= userlisting.location %> </strong>
+    </li>
+  <%end %>
+</ul>
