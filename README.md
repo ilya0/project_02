@@ -8,46 +8,54 @@ Users -> Userlistings
 Users have many Userlistings
 Userlistings belong to a user
 
-`table "users"
-    t.string   "name"
-    t.string   "location"
-    t.string   "sex"
-    t.string   "phone_number"
-    t.string   "email"
-    t.string   "website"
-    t.string   "fblink"
-    t.string   "sclink"
-    t.string   "twlink"`
+|table "users" |
+--- | --- | ---
+    t.string   "name"|
+    t.string   "location"|
+    t.string   "sex"|
+    t.string   "phone_number"|
+    t.string   "email"|
+    t.string   "website"|
+    t.string   "fblink"|
+    t.string   "sclink"|
+    t.string   "twlink"|
 
- >table "userlistings"
- >   t.string   "title"
- >   t.string   "details"
- >   t.string   "location"
- >   t.float    "pay"
- >   t.string   "email"
- >   t.integer  "user_id"
- >   t.string   "category"
- >   t.boolean  "hide"
-
-
-
-
-- Explanations of the technologies used.
-
--Ruby
--Ruby on rails
--routes
--Heroku
--Chrome browser
+ table "userlistings" |
+--- | --- | ---
+   t.string   "title"|
+   t.string   "details"|
+    t.string   "location"|
+    t.float    "pay"|
+    t.string   "email"|
+    t.integer  "user_id"|
+    t.string   "category"|
+    t.boolean  "hide"|
 
 
-- Installation/startup instructions.
 
--open heroku website
-[Heroku](http://www.heroku.com)
--profit
 
-- Unsolved problems, etc.
+
+
+## Explanations of the technologies used.
+
+* Ruby
+* Ruby on rails
+* routes
+* Heroku
+* Chrome browser
+
+
+
+
+## Installation/startup instructions.
+
+* open heroku website
+[Heroku](https://afternoon-ravine-35322.herokuapp.com/userlistings)
+* profit
+
+
+
+##Unsolved problems, etc.
 
 -needs description in profiles
 -could use a beutified layout
@@ -58,14 +66,11 @@ Userlistings belong to a user
 
 
 
--  **Trello board** with:
-    - **Wireframes of your app**.
-    - **User Stories**, each moving from left to right in the following
-      three lists in your board: Ice Box, Current/MVP and Completed.
-      Prioritize your user stories within the Ice Box with your "wish
-      list" stories at the bottom.
 
----
+
+
+
+-------
 
 
 
