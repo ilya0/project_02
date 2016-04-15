@@ -38,20 +38,28 @@ Userlistings belong to a user
 
 ## Explanations of the technologies used.
 
-* Ruby
-* Ruby on rails
-* routes
-* Heroku
-* Chrome browser
+* Ruby - Programming language
+* Ruby on rails - Frame work
+* Heroku - host for test website
+* Chrome browser - testing and debugging
+* Sublime - for code creation
+* MacDown - for mark down readme
 
 
 
 
-## Installation/startup instructions.
+##Installation/startup instructions.
 
 * open heroku website
 [Heroku](https://afternoon-ravine-35322.herokuapp.com/userlistings)
-* profit
+* Create  user by clicking on the create profile link
+* Submit the correct fields
+* Profile creation fields will redirect to index pages
+* Browse listings and or create a listing
+* To create a listing - click on post to board
+* Listing fields will open, and populate and submit to the index page
+
+* To view your listings go to the edit profile page and you will have a list of various listings you have created at the bottom of your page
 
 
 
@@ -60,8 +68,21 @@ Userlistings belong to a user
 * needs description in profiles
 * could use a beutified layout
 * search functionality
+* styling
 
 
+##Code run down
+
+- two models are created 
+- Users - this is the list of people 
+- Userlistings - listings are creation of listings from these people
+- Users has 4 views and a form - show, new, index, edit
+- Userlisting has 4 views and form - userform, show, new, index and edit
+- Each of these have corresponding controlllers
+- controller methods include, show, new, index, edit,create, update, user and userlisting params
+- Seeds - have a couple defined seeds and then also use the faker gem to spoof some of the users info
+- Authentication is done through bcrypt gem and through sessions controller
+- debugging was done with bye bug and rails c in terminal
 
 
 
