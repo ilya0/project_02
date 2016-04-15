@@ -57,9 +57,9 @@ Userlistings belong to a user
 
 ##Unsolved problems, etc.
 
--needs description in profiles
--could use a beutified layout
--search functionality
+* needs description in profiles
+* could use a beutified layout
+* search functionality
 
 
 
