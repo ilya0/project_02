@@ -1,14 +1,13 @@
-<h1>Userlistings#show</h1>
-<p>Find me in app/views/userlistings/show.html.erb</p>
-
+<h1><%= @userlistings.title%></h1>
 
 <p>
-<%= @userlistings.title%>
 <%= @userlistings.details%>
-<%= @userlistings.pay%>
-<%= @userlistings.location%>
-<%= @userlistings.email%>
-<%= @userlistings.category%>
+
+<p> Music Category <%= @userlistings.category%> </p>
+<p> Pay Rate: <%= @userlistings.pay%> </p>
+<p> Location: <%= @userlistings.location%> </p>
+
+<p> Contact me at: <%= @userlistings.email%> </p>
 <p> Created by:  <%=link_to @userlistings.user.name, user_path(@userlistings.user) %> </p>
 </p>
 <!-- this is the login based on the fact that the user is logged in -->

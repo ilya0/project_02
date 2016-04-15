@@ -1,15 +1,18 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1><%= @user.name %>-<%= @user.sex %></h1>
+
 
 <p>
-  <%= @user.name %>
-  <%= @user.location %>
-  <%= @user.sex %>
-  <%= @user.phone_number %>
-  <%= @user.email %>
-  <%= @user.fblink %>
-  <%= @user.sclink %>
-  <%= @user.twlink %>
+<p>Location:<%= @user.location %></p>
+<p>Phone number: <%= @user.phone_number %> </p>
+<p>Contact me at: <%= @user.email %> </p>
+ <p> Links:</p>
+<a href=<%="http://#{@user.fblink}"%>><%= @user.fblink %></a><br>
+<a href=<%="http://#{ @user.sclink}"%>><%= @user.sclink %></a><br>
+<a href=<%="http://#{ @user.twlink}"%>><%= @user.twlink %></a><br>
+<a href=<%="http://#{ @user.website}"%>><%= @user.website %></a><br>
+
+
+
 </p>
 
 <!-- if some one is logged in  -->
