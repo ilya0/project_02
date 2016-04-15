@@ -8,7 +8,7 @@ Users -> Userlistings
 Users have many Userlistings
 Userlistings belong to a user
 
-table "users"
+`table "users"
     t.string   "name"
     t.string   "location"
     t.string   "sex"
@@ -17,9 +17,9 @@ table "users"
     t.string   "website"
     t.string   "fblink"
     t.string   "sclink"
-    t.string   "twlink"
+    t.string   "twlink"`
 
- table "userlistings"
+ `table "userlistings"
     t.string   "title"
     t.string   "details"
     t.string   "location"
@@ -27,11 +27,11 @@ table "users"
     t.string   "email"
     t.integer  "user_id"
     t.string   "category"
-    t.boolean  "hide"
+    t.boolean  "hide"`
 
 
 
-- Also in the `README.md` file:
+- Also in the README.md file:
     - Explanations of the technologies used.
 
 -Ruby
