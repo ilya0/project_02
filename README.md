@@ -19,20 +19,20 @@ Userlistings belong to a user
     t.string   "sclink"
     t.string   "twlink"`
 
- `table "userlistings"
-    t.string   "title"
-    t.string   "details"
-    t.string   "location"
-    t.float    "pay"
-    t.string   "email"
-    t.integer  "user_id"
-    t.string   "category"
-    t.boolean  "hide"`
+ >table "userlistings"
+ >   t.string   "title"
+ >   t.string   "details"
+ >   t.string   "location"
+ >   t.float    "pay"
+ >   t.string   "email"
+ >   t.integer  "user_id"
+ >   t.string   "category"
+ >   t.boolean  "hide"
 
 
 
-- Also in the README.md file:
-    - Explanations of the technologies used.
+
+- Explanations of the technologies used.
 
 -Ruby
 -Ruby on rails
