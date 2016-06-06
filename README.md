@@ -8,20 +8,54 @@ Music Collaboration and Posting site for musicians and artists
 
 This is an online app, sort of lie craigslist, which people can post wanted add for musicians, items or even shows. People intending to post, can create a user account and profile which then can be used to interact with the site and create, delete, post and edit posts.
 
-![](https://github.com/ilya0/Project1/blob/master/readme%20files/Main%20setup%20front%20page.png)
+![](https://github.com/ilya0/project_02/blob/master/readme_files/Main_page.png)
 
 Link to App- [Heroku](https://afternoon-ravine-35322.herokuapp.com/userlistings)
 
 Link to Trello - [Trello](https://trello.com/b/zQmgbgCR/project2-music-board)
 
+### Prerequisities
+------
+Mongo needs to be installed, computer needs to be able to run Ruby as well as SQl since the database is running in SQl
 
 
+### Installing
+------
+* open heroku website
+[Heroku](https://afternoon-ravine-35322.herokuapp.com/userlistings)
+* Create  user by clicking on the create profile link
+* Submit the correct fields
+* Profile creation fields will redirect to index pages
+* Browse listings and or create a listing
+* To create a listing - click on post to board
+* Listing fields will open, and populate and submit to the index page
 
-Tables
+* To view your listings go to the edit profile page and you will have a list of various listings you have created at the bottom of your page
 
-* Users -> Userlistings
-* Users have many Userlistings
-* Userlistings belong to a user
+
++ Perform a Bundle Install to get all applicable Gems needed.
++ Perform rake db:create, rake db:migrate, and rake db:seed.
++ To view the app, perform rails s and visit localhost:3000 in your web browser
+
+## Deployment and Using the App
+As usual, create the user and then use the app to create a profile and posts
+
+## Built With
+
+* MVC model (Model, View, Conroller)
+* Html
+* SQL for database managment
+* Ruby - Programming language
+* Ruby on rails - Frame work
+* Heroku - host for test website
+* Chrome browser - testing and debugging
+* Sublime - for code creation
+* MacDown - for mark down readme
+
+-- Table Structure as follows 
+Users -> Userlistings
+Users have many Userlistings
+Userlistings belong to a user
 
 |table "users" |
 --- | --- | ---
@@ -48,42 +82,11 @@ Tables
 
 
 
+## Authors
+
+* **Ilya Osovets** -- [ilya0](https://github.com/ilya0)
 
 
-
-## Explanations of the technologies used.
-
-* Ruby - Programming language
-* Ruby on rails - Frame work
-* Heroku - host for test website
-* Chrome browser - testing and debugging
-* Sublime - for code creation
-* MacDown - for mark down readme
-
-
-
-
-##Installation/startup instructions.
-
-* open heroku website
-[Heroku](https://afternoon-ravine-35322.herokuapp.com/userlistings)
-* Create  user by clicking on the create profile link
-* Submit the correct fields
-* Profile creation fields will redirect to index pages
-* Browse listings and or create a listing
-* To create a listing - click on post to board
-* Listing fields will open, and populate and submit to the index page
-
-* To view your listings go to the edit profile page and you will have a list of various listings you have created at the bottom of your page
-
-
-
-##Unsolved problems, etc.
-
-* needs description in profiles
-* could use a beutified layout
-* search functionality
-* styling
 
 
 ##Code run down
@@ -98,4 +101,14 @@ Tables
 - Seeds - have a couple defined seeds and then also use the faker gem to spoof some of the users info
 - Authentication is done through bcrypt gem and through sessions controller
 - debugging was done with bye bug and rails c in terminal
+
+
+##Unsolved problems, etc.
+
+* needs description in profiles
+* could use a beutified layout
+* search functionality
+* styling
+
+
 
