@@ -1,9 +1,18 @@
 # ![](https://camo.githubusercontent.com/6ce15b81c1f06d716d753a61f5db22375fa684da/68747470733a2f2f67612d646173682e73332e616d617a6f6e6177732e636f6d2f70726f64756374696f6e2f6173736574732f6c6f676f2d39663838616536633963333837313639306533333238306663663535376633332e706e67)  Full-stack CRUD App - Musicboard
 
-###Music Collaboration and Posting site for musicians and artists
+Music Collaboration and Posting site for musicians and artists
 
-[Trello](https://trello.com/b/zQmgbgCR/project2-music-board)
-[Heroku](https://afternoon-ravine-35322.herokuapp.com/userlistings)
+
+
+## Getting Started
+
+This is an online app, sort of lie craigslist, which people can post wanted add for musicians, items or even shows. People intending to post, can create a user account and profile which then can be used to interact with the site and create, delete, post and edit posts.
+
+![](https://github.com/ilya0/Project1/blob/master/readme%20files/Main%20setup%20front%20page.png)
+
+Link to App- [Heroku](https://afternoon-ravine-35322.herokuapp.com/userlistings)
+
+Link to Trello - [Trello](https://trello.com/b/zQmgbgCR/project2-music-board)
 
 
 
